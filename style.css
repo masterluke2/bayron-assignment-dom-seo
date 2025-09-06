@@ -1,0 +1,99 @@
+:root {
+  --bg: #0f1226;
+  --card: #171a33;
+  --text: #e7e9ff;
+  --accent: #7c5cff;
+  --accent-2: #11b5e4;
+  --danger: #ff5c7a;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 80% 0%, #1d2150 0%, transparent 60%),
+    radial-gradient(1000px 600px at 0% 100%, #11203a 0%, transparent 60%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+h1, h2 { margin: 0.5rem 0 1rem; }
+
+.hero {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 0.75rem;
+  margin: 1rem 0 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.hero figcaption { opacity: 0.85; font-size: 0.95rem; margin-top: 0.5rem; }
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+.controls input {
+  grid-column: span 1;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #2a2f57;
+  background: #0e1130;
+  color: var(--text);
+}
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.2s ease;
+}
+.btn:hover { filter: brightness(1.12); }
+.btn:active { transform: translateY(1px); }
+.btn-danger {
+  background: var(--danger);
+}
+
+.list {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 2rem;
+}
+.list li { padding: 0.4rem 0; border-bottom: 1px solid #2a2f57; }
+.list li:last-child { border-bottom: none; }
+
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+@media (max-width: 640px) {
+  .controls { grid-template-columns: 1fr 1fr; }
+  #newItemInput { grid-column: span 2; }
+}
