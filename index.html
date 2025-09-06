@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mobile Gaming & Anime</title>
+  <meta name="description" content="A simple page about playing mobile games and watching anime, including a favorites list you can edit with buttons." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Mobile Gaming & Anime</h1>
+  </header>
+
+  <main class="container">
+    <h2>Why I love them</h2>
+
+    <figure class="hero">
+      <img
+        src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=60"
+        alt="Hands holding a phone while playing a mobile game" />
+      <figcaption>After a long day, I play a few quick mobile games and wind down with an episode or two of anime.</figcaption>
+    </figure>
+
+    <p id="intro">
+      I like to chill with a couple quick mobile matches, then cozy up for some anime.
+    </p>
+
+    <section class="controls">
+      <button id="changeTextBtn" class="btn">Change intro text</button>
+
+      <label for="newItemInput" class="sr-only">Add a game or anime</label>
+      <input id="newItemInput" type="text" placeholder="Add a game or anime" />
+      <button id="addItemBtn" class="btn">Add to list</button>
+      <button id="removeItemBtn" class="btn btn-danger">Remove last item</button>
+    </section>
+
+    <ul id="favoritesList" class="list">
+      <li>Dota</li>
+      <li>One Piece</li>
+      <li>Valorant</li>
+    </ul>
+
+    <noscript>This page uses JavaScript for the buttons. Please enable JavaScript.</noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for a DOM & SEO exercise.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
